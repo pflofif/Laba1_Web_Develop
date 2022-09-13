@@ -23,14 +23,28 @@ let chart = new Chart(ctx, {
                 text: 'Balance summary',
                 align: 'start',
                 font:{
-                    size: 16
+                    size: 16,
+                    weight: '900'
+                },
+                color: '#313131',
+                padding: {
+                    top: 20,
+                    bottom: 10
                 }
             },
             legend: {
                 display: false
+            },
+            labels: {
+               align: 'top'
             }
         },
         scales: {
+            x: {
+                grid:{
+                    display:false
+                }
+            },
             y: {
                 min: 15,
                 max: 35,
