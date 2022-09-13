@@ -1,0 +1,33 @@
+@import 'block-size';
+
+$default-width: 575px;
+$default-height : 383px;
+$border-radius:20px;
+$background-color: white;
+$margin-bot : 25px;
+
+div.row{
+    margin-top: 40px;
+    @include block-size(auto, 1200px);
+
+    div.col{
+        .boardInfo{
+            @include block-size($default-height, $default-width);
+
+            margin: 0 5px $margin-bot 10px;
+            background-color: $background-color;
+            border-radius: $border-radius;
+        }
+    }
+
+    div.col.transaction-history{
+        @include block-size($default-height * 2 + $margin-bot, $default-width);
+        background-color: $background-color;
+        border-radius: $border-radius;
+
+        .item{
+            @include block-size(60px, $default-width - 20);
+            display: flex;
+        }
+    }
+}

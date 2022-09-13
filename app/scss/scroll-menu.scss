@@ -1,0 +1,9 @@
+@import "block-size";
+
+.wrapper2{
+    overflow-x: scroll;
+}
+.div2 {
+    @include block-size(160px, 1000px);
+    margin: 0.3px;
+}

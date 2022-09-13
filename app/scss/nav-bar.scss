@@ -1,0 +1,22 @@
+$font-size: x-small;
+.price{
+    display: grid;
+    grid-template-columns: 150px 150px 150px;
+    font-size: $font-size;
+    text-align: center;
+    padding-top: 5px;
+}
+
+.btn-group-pos-navbar{
+    border-radius: 30px;
+    padding: 5px;
+    margin-right:160px;
+    margin-left:250px;
+}
+.bg-btn-color{
+    background-color: #363636;
+}
+.font-params{
+    color: #CACACA;
+    font-size: $font-size;
+}
