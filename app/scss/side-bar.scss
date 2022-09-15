@@ -11,8 +11,11 @@
     @include block-size(auto, 180px);
 
     background-color: #373737;
-    display:inline-block;
 }
 .font-side-bar{
     color: #AEAEAE;
+}
+
+.bottom-aligned {
+    margin-top: 259px;
 }
