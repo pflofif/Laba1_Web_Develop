@@ -21,7 +21,7 @@ div.row {
       border-radius: $border-radius;
 
       .title {
-        padding-top: 15px;
+        padding-top: 25px;
         padding-right: $title-padding;
         padding-left: $title-padding;
         display: flex;
@@ -38,6 +38,7 @@ div.row {
             color: #c4c4c4;
             padding-right: 15px;
           }
+
           a:hover {
             color: #ce6d70;
             text-decoration: underline 2px;
@@ -71,6 +72,16 @@ div.row {
           padding-bottom: 4px;
           padding-right: 15px;
         }
+      }
+      ul {
+        list-style-type: none;
+      }
+      .doughnut-wrapper{
+        margin-left: auto;
+        margin-right: 0;
+
+        width: 250px;
+        height: 250px;
       }
     }
   }

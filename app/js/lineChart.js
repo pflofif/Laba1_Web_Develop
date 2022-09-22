@@ -1,14 +1,14 @@
-let ctxOption = document.getElementById('line-chart');
-ctxOption.height = 240;
+let ctxLineOption = document.getElementById('line-chart');
+ctxLineOption.height = 240;
 
-let ctx = ctxOption.getContext('2d');
+let ctxLine = ctxLineOption.getContext('2d');
 let chartData = [17, 26, 23, 32, 29, 31, 25];
-let labels = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
+let labelsLine = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
 
-let chart = new Chart(ctx, {
+let lineChart = new Chart(ctxLine, {
     type: 'line',
     data: {
-        labels: labels,
+        labels: labelsLine,
         datasets: [{
             borderColor: [
                 "#586fda"

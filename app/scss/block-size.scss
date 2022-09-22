@@ -2,3 +2,22 @@
   height: $propHeight;
   width: $propWidth;
 }
+
+#labelsDg{
+  padding-top: 30px;
+  padding-bottom: 30px;
+  font-size: 18px;
+
+}
+#labelsDg li{
+  height: 35px;
+}
+.circle {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  font-size: 12px;
+  line-height: 16px;
+  text-align: center;
+  display: inline-block;
+}
