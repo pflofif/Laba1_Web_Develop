@@ -1,58 +1,88 @@
 @import 'block-size';
 
 $default-width: 575px;
-$default-height : 355px;
-$border-radius:20px;
+$default-height: 355px;
+$border-radius: 20px;
 $background-color: white;
-$margin-bot : 25px;
+$margin-bot: 25px;
+$bolder-size: bolder;
+$title-padding: 20px;
 
-div.row{
-    margin-top: 40px;
-    @include block-size(auto, 1200px);
+div.row {
+  margin-top: 40px;
+  @include block-size(auto, 1200px);
 
-    div.col{
-        .boardInfo{
-            @include block-size($default-height, $default-width);
+  div.col {
+    .boardInfo {
+      @include block-size($default-height, $default-width);
 
-            margin: 0 5px $margin-bot 10px;
-            background-color: $background-color;
-            border-radius: $border-radius;
+      margin: 0 5px $margin-bot 10px;
+      background-color: $background-color;
+      border-radius: $border-radius;
 
-            .balance{
-                display: flex;
-                align-items: flex-end;
-                justify-content: flex-end;
-                padding-bottom: 25px;
+      .title {
+        padding-top: 15px;
+        padding-right: $title-padding;
+        padding-left: $title-padding;
+        display: flex;
 
-                a{
-                    font-weight: bolder;
-                }
-                #total {
-                    font-size: 14px;
-                    align-self: center;
-                    padding-right: 5px;
-                }
-                #balance{
-                    font-size: 24px;
-                    padding: 0 10px;
-                }
-                #value{
-                    font-size: 14px;
-                    padding-bottom: 4px;
-                    padding-right: 15px;
-                }
-            }
+        a {
+          font-weight: $bolder-size;
         }
-    }
 
-    div.col.transaction-history{
-        @include block-size($default-height * 2 + $margin-bot, $default-width);
-        background-color: $background-color;
-        border-radius: $border-radius;
+        .time-period {
+          margin-left: auto;
+          margin-right: 0;
 
-        .item{
-            @include block-size(60px, $default-width - 20);
-            display: flex;
+          a {
+            color: #c4c4c4;
+            padding-right: 15px;
+          }
+          a:hover {
+            color: #ce6d70;
+            text-decoration: underline 2px;
+          }
         }
+      }
+
+      .balance {
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+        padding-bottom: 25px;
+
+        a {
+          font-weight: $bolder-size;
+        }
+
+        #total {
+          font-size: 14px;
+          padding-bottom: 8px;
+          padding-right: 5px;
+        }
+
+        #balance {
+          font-size: 24px;
+          padding: 0 10px;
+        }
+
+        #value {
+          font-size: 14px;
+          padding-bottom: 4px;
+          padding-right: 15px;
+        }
+      }
     }
+  }
+
+  div.col.transaction-history {
+    @include block-size($default-height * 2 + $margin-bot, $default-width);
+    background-color: $background-color;
+    border-radius: $border-radius;
+
+    .item {
+      @include block-size(60px, $default-width - 20);
+      display: flex;
+    }
+  }
 }
