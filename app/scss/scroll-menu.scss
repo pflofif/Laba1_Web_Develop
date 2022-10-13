@@ -1,3 +1,4 @@
+/*
 @import "block-size";
 
 .wrapper2{
@@ -6,4 +7,83 @@
 .div2 {
     @include block-size(160px, 1000px);
     margin: 0.3px;
+}*/
+
+@import "block-size";
+$height: 150px;
+$width: 273px;
+$border-radius: 15px;
+$font-color: #7c7c7c;
+
+#container-cards{
+    margin-left: -30px;
+    padding-top: 40px;
+    padding-bottom: 20px;
+    @include block-size(50px, $width * 4 + 199);
+}
+
+#list-container {
+    overflow:hidden;
+    @include block-size(auto, 1250px);
+    float:left;
+}
+
+.list{
+    min-width:7000px;
+    float:left;
+}
+#arrowR{
+    //background:yellow;
+    @include block-size($height, 20px);
+    float:right;
+    cursor:pointer;
+}
+#arrowL{
+    //background:yellow;
+    @include block-size($height, 20px);
+    float:left;
+    cursor:pointer;
+}
+
+.card {
+    @include block-size($height, $width);
+    color: white;
+    background-color: #363636;
+    margin: 5px 23px;
+    border-radius: $border-radius;
+
+    float:left;
+    position:relative;
+
+    .content {
+        padding-top: 18px;
+        padding-left: 18px;
+
+        .account {
+            display: grid;
+            grid-template-columns: 2fr 1fr 2fr;
+        }
+
+        .number {
+            @include block-size(auto, $width - 50);
+
+            font-size: 18px;
+            color: $font-color;
+            text-align: justify;
+            text-align-last: justify;
+            padding-top: 15px;
+        }
+
+        .footer {
+            display: grid;
+            color: $font-color;
+            grid-template-columns: 1fr 1fr;
+            padding-top: 9px;
+        }
+    }
+}
+.icons {
+    text-align: right;
+    font-size: 18px;
+    padding-right: 17px;
 }
