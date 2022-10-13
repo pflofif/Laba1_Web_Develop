@@ -1,6 +1,6 @@
 @import 'block-size';
 
-$default-width: 575px;
+$default-width: 600px;
 $default-height: 355px;
 $border-radius: 20px;
 $background-color: white;
@@ -10,7 +10,7 @@ $title-padding: 20px;
 
 div.row {
   margin-top: 40px;
-  @include block-size(auto, 1200px);
+  @include block-size(auto, 1250px);
 
   div.col {
     .boardInfo {
@@ -20,30 +20,11 @@ div.row {
       background-color: $background-color;
       border-radius: $border-radius;
 
-      .title {
-        padding-top: 25px;
-        padding-right: $title-padding;
-        padding-left: $title-padding;
-        display: flex;
-
-        a {
-          font-weight: $bolder-size;
-        }
-
-        .time-period {
-          margin-left: auto;
-          margin-right: 0;
-
-          a {
-            color: #c4c4c4;
-            padding-right: 15px;
-          }
-
-          a:hover {
-            color: #ce6d70;
-            text-decoration: underline 2px;
-          }
-        }
+      #line-chart{
+        padding-left: 20px;
+      }
+      #labelsDg{
+        padding-left: 12px;
       }
 
       .balance {
@@ -73,10 +54,12 @@ div.row {
           padding-right: 15px;
         }
       }
+
       ul {
         list-style-type: none;
       }
-      .doughnut-wrapper{
+
+      .doughnut-wrapper {
         margin-left: auto;
         margin-right: 0;
 
@@ -86,14 +69,78 @@ div.row {
     }
   }
 
+  .title {
+    padding-top: 25px;
+    padding-right: $title-padding;
+    //padding-left: $title-padding;
+    display: flex;
+    font-size: 16px;
+
+    a {
+      font-weight: $bolder-size;
+    }
+
+    .topic {
+      margin-left: auto;
+      margin-right: 0;
+
+      a {
+        color: #c4c4c4;
+        padding-right: 15px;
+      }
+
+      a:hover {
+        color: #ce6d70;
+        text-decoration: underline 2px;
+      }
+    }
+  }
+
   div.col.transaction-history {
-    @include block-size($default-height * 2 + $margin-bot, $default-width);
+    @include block-size($default-height * 2 + $margin-bot, $default-width - 20);
     background-color: $background-color;
     border-radius: $border-radius;
+    padding-left: 25px;
+
+    .title .topic {
+      @include block-size(40px, auto);
+
+      a {
+        color: #c4c4c4;
+      }
+    }
 
     .item {
-      @include block-size(60px, $default-width - 20);
+      @include block-size(60px, $default-width);
       display: flex;
+
+
+      .trans-info {
+        padding-left: 10px;
+        @include block-size(auto, 330px);
+        small {
+          color: #c8c8c8;
+        }
+      }
+
+      .price {
+        font-size: 20px;
+        @include block-size(20px, 20px);
+        padding-left: 40px;
+        font-weight: bold;
+
+        small {
+          font-size: small;
+          color: #7c7c7c;
+        }
+
+      }
+    }
+
+    .date {
+      margin-top: 10px;
+      @include block-size(40px, auto);
+      color: #d5d5d5;
     }
   }
 }
