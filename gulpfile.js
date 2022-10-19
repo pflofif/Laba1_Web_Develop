@@ -52,14 +52,6 @@ async function serve(){
     gulp.watch('app/scss/**.scss', gulp.series(scssTask)).on('change', browserSync.reload);
     gulp.watch('app/js/**.js', gulp.series(scripts)).on('change', browserSync.reload);
 }
-/*async function image(){
-    return gulp.src ( "app/images/**")
-        .pipe(imagemin({
-            progressive: true,
-            svgoPlugins: [{removeViewBox: false}],
-            interlaced: true
-        }))
-        .pipe(gulp.dest ( "dist/images"))
-}*/
+
 exports.clean = gulp.series(clear);
 exports.build = gulp.series(scssTask, html, scripts, serve)

@@ -1,9 +1,3 @@
-/*
-$(function(){
-    $(".wrapper2").scroll(function(){
-        $(".wrapper2").scrollLeft();
-    });
-});*/
 $(document).ready(function() {
 
     let $item = $('div.card'), //Cache your DOM selector

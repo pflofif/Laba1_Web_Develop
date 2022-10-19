@@ -1,0 +1,21 @@
+{
+  "Lines": [
+    {
+        "Mon":17,
+        "Tue":26,
+        "Wed":23,
+        "Thu":29,
+        "Fri":29,
+        "Sat":31,
+        "Sun":24
+    },{
+        "9":"Other expenses",
+        "10":"House and services",
+        "15":"Mobile and internet",
+        "16":"Cafe and restaurants",
+        "18":"Clothes and shoes",
+        "23":"Groceries and food",
+        "25":"Vehicles and transport"
+    }
+  ]
+}
